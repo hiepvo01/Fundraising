@@ -1,0 +1,30 @@
+h4 {
+    margin-bottom:0;
+    padding-top:10px;
+}
+
+.quantity{
+    width: 100%;
+}
+
+td{
+    text-align:center;
+}
+
+.blank_row
+{
+    height: 50px !important; /* overwrites any other rules */
+}
+
+textarea {
+    white-space: normal;
+    text-align: justify;
+    text-align-last: center;
+    margin:0 auto;
+}
+
+body {
+    width:1080px;
+    margin:0 auto;
+}
+
