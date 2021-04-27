@@ -1,5 +1,5 @@
 window.onload = async function() {
-    let students = await fetch("http://vohi01.pythonanywhere.com//students")
+    let students = await fetch("https://vohi01.pythonanywhere.com//students")
     .then(response => response.json())
 
     var select = document.getElementById("selectStudent");
@@ -21,7 +21,7 @@ window.onload = async function() {
         select.appendChild(el);
     }
 
-    let merchants = await fetch("http://vohi01.pythonanywhere.com//merchants")
+    let merchants = await fetch("https://vohi01.pythonanywhere.com//merchants")
     .then(response => response.json())
     
     var select = document.getElementById("selectMerchant");
@@ -37,7 +37,7 @@ window.onload = async function() {
 async function getStudent(){
     student = document.getElementById('selectStudent').value
     studentName = student.split(" ")[1]
-    url = "http://vohi01.pythonanywhere.com//students/" + studentName
+    url = "https://vohi01.pythonanywhere.com//students/" + studentName
     let result = await fetch(url).then(response => response.json())
 
     let studentTotal = document.getElementById('studentTotal');
@@ -68,7 +68,7 @@ async function getFund(){
     let oldfund = document.getElementById('selectFund').value;
     fund = oldfund.replace(' ', '');
     fund = fund.toLowerCase();
-    url = "http://vohi01.pythonanywhere.com//" + fund
+    url = "https://vohi01.pythonanywhere.com//" + fund
     let result = await fetch(url).then(response => response.json())
 
     let studentTotal = document.getElementById('fundTotal');
@@ -101,7 +101,7 @@ async function getMerchant(){
         oldfund= "A&W_LIS10%"
     }
     fund = oldfund.replace(' ', '%20');
-    url = "http://vohi01.pythonanywhere.com//merchants/" + fund
+    url = "https://vohi01.pythonanywhere.com//merchants/" + fund
     let result = await fetch(url).then(response => response.json())
 
     let studentTotal = document.getElementById('merchantTotal');
@@ -136,7 +136,7 @@ async function date(){
     if(bdate =="" || edate =="") {
         alert("Please select both begin date and end date")
     } else {
-        url = "http://vohi01.pythonanywhere.com//date/" + bdate + '/' + edate
+        url = "https://vohi01.pythonanywhere.com//date/" + bdate + '/' + edate
         let result = await fetch(url).then(response => response.json())
 
         let studentTotal = document.getElementById('dateTotal');

@@ -106,7 +106,7 @@ function printPage(){
 
 function submitForm(){
     var request = new XMLHttpRequest();
-    request.open('POST', 'http://127.0.0.1:5000/post_orders');
+    request.open('POST', 'https://127.0.0.1:5000/post_orders');
     request.setRequestHeader("Access-Control-Allow-Origin", "*");
     request.setRequestHeader("Content-Type", "application/json");
     
