@@ -99,9 +99,21 @@ async function getMerchant(){
     let oldfund = document.getElementById('selectMerchant').value;
     if (oldfund.includes("A&W/LIS 10%")){
         oldfund= "A&W_LIS10%"
+    } else if (oldfund.includes("Kwik")){
+        oldfund= "Kwik"
+    } else if (oldfund.includes("Atomic")){
+        oldfund= "Atomic"
+    } else if (oldfund.includes("ACE")){
+        oldfund= "ACE"
+    } else if (oldfund.includes("Casey")){
+        oldfund= "Casey"
+    } else if (oldfund.includes("Sue")){
+        oldfund= "Sue"
     }
     fund = oldfund.replace(' ', '%20');
+    fund = fund.replace(' ', '%20');
     url = "https://vohi01.pythonanywhere.com/merchants/" + fund
+    console.log(url)
     let result = await fetch(url).then(response => response.json())
 
     let studentTotal = document.getElementById('merchantTotal');
